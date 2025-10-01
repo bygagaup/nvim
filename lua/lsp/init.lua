@@ -8,3 +8,6 @@ require("lsp.rust").setup(lspconfig, capabilities)
 
 -- Lua
 require("lsp.lua").setup(lspconfig, capabilities)
+
+-- Json
+require("lsp.json").setup(lspconfig, capabilities)
