@@ -1,16 +1,14 @@
--- lua/lsp/jsonlua
+-- lua/lsp/json.lua
 
-local M = {}
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-M.setup = function(lspconfig, capabilities)
-    lspconfig.jsonls.setup {
-        capabilities = capabilities,
-        settings = {
-            json = {
-                validate = { enable = true },
-            },
+vim.lsp.config('jsonls', {
+    capabilities = capabilities,
+    settings = {
+        json = {
+            validate = { enable = true },
         },
-    }
-end
+    },
+})
 
-return M
+vim.lsp.enable('jsonls')

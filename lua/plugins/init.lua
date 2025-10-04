@@ -6,7 +6,11 @@ require("lazy").setup({
     { "neovim/nvim-lspconfig" },
 
     -- Rust
-    { "simrat39/rust-tools.nvim" },
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^6',
+        lazy = false,
+    },
 
     -- Автодополнение
     { "hrsh7th/nvim-cmp" },
@@ -14,7 +18,7 @@ require("lazy").setup({
     { "L3MON4D3/LuaSnip" },
 
     -- Подсветка
-    { "nvim-treesitter/nvim-treesitter",  branch = 'master', lazy = false, build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate" },
 
     {
         'nvim-telescope/telescope.nvim',
@@ -27,5 +31,4 @@ require("lazy").setup({
 require("plugins.mason")
 require("plugins.cmp")
 require("plugins.treesitter")
-require("plugins.rust_tools")
 require("plugins.telescope")
